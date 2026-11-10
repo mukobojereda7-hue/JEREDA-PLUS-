@@ -5,11 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JEREDA PLUS</title>
-
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -19,117 +16,60 @@ body {
 header {
   background: #0755b8;
   color: white;
-  padding: 25px 18px;
   text-align: center;
+  padding: 28px 15px;
 }
-header h1 {
-  margin: 0;
-  font-size: 30px;
-}
-header p {
-  margin-bottom: 0;
-}
-main {
-  padding: 20px;
-  max-width: 650px;
-  margin: auto;
-}
-.welcome {
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-}
-h2 {
-  color: #0755b8;
-}
-.services {
+header h1 { margin: 0; font-size: 30px; }
+header p { margin-bottom: 0; }
+main { padding: 20px; max-width: 650px; margin: auto; }
+h2 { color: #0755b8; }
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
-.service {
+.module {
   background: white;
-  padding: 20px 10px;
-  border-radius: 12px;
+  padding: 22px 10px;
+  border-radius: 14px;
   text-align: center;
+  box-shadow: 0 2px 8px #00000012;
   font-weight: bold;
-  box-shadow: 0 2px 8px #00000010;
 }
-.service span {
+.module span {
   display: block;
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 footer {
   text-align: center;
   padding: 25px;
-  color: #65758b;
+  color: #667;
 }
 </style>
 </head>
-
 <body>
-
 <header>
   <h1>JEREDA PLUS</h1>
+  <p>Votre plateforme numérique tout-en-un</p>
   <p>Rapidité • Qualité • Fiabilité</p>
 </header>
-
 <main>
-
-  <section class="welcome">
-    <h2>Bienvenue sur JEREDA PLUS !</h2>
-    <p>
-      Votre plateforme numérique tout-en-un.
-      Découvrez nos services et simplifiez votre quotidien.
-    </p>
-  </section>
-
-  <h2>Nos espaces</h2>
-
-  <section class="services">
-
-    <div class="service">
-      <span>💻</span>
-      Services numériques
-    </div>
-
-    <div class="service">
-      <span>📚</span>
-      Éducation
-    </div>
-
-    <div class="service">
-      <span>💼</span>
-      Emploi et business
-    </div>
-
-    <div class="service">
-      <span>🛒</span>
-      Commerce
-    </div>
-
-    <div class="service">
-      <span>📰</span>
-      Actualités
-    </div>
-
-    <div class="service">
-      <span>🤖</span>
-      JEREDA AI
-    </div>
-
-  </section>
-
+  <h2>Bienvenue sur JEREDA PLUS</h2>
+  <p>Découvrez nos services et développez vos possibilités numériques.</p>
+  <h2>Nos services</h2>
+  <div class="grid">
+    <div class="module"><span>💻</span>Services numériques</div>
+    <div class="module"><span>📚</span>Éducation</div>
+    <div class="module"><span>💼</span>Emploi & Business</div>
+    <div class="module"><span>🛒</span>Commerce</div>
+    <div class="module"><span>📰</span>Actualités</div>
+    <div class="module"><span>🤖</span>JEREDA AI</div>
+  </div>
 </main>
-
 <footer>
-  © 2026 JEREDA TECHNOLOGIES
-  <br>
+  © 2026 JEREDA TECHNOLOGIES<br>
   Tous droits réservés.
 </footer>
-
 </body>
-  </html>
-  
+</html>
