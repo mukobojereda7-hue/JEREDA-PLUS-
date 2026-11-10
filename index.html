@@ -1,4 +1,44 @@
 
+function showPage(page) {
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("services").classList.add("hidden");
+  document.getElementById(page).classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+
+function chooseService(service) {
+  document.getElementById("serviceChoice").value = service;
+  document.getElementById("requestForm").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+document.getElementById("serviceForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("clientName").value.trim();
+  const phone = document.getElementById("clientPhone").value.trim();
+  const service = document.getElementById("serviceChoice").value;
+  const details = document.getElementById("clientDetails").value.trim();
+
+  const message =
+    "Bonjour JEREDA TECHNOLOGIES !\n\n" +
+    "Je souhaite commander un service sur JEREDA PLUS.\n\n" +
+    "Nom : " + name + "\n" +
+    "Téléphone : " + phone + "\n" +
+    "Service : " + service + "\n" +
+    "Description : " + details + "\n\n" +
+    "Merci.";
+
+  const whatsappNumber = "243901349334";
+
+  const whatsappURL =
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+});
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
