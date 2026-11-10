@@ -1,4 +1,255 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073B80">
+  <title>JEREDA PLUS | Plateforme numérique</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f7fc;
+      color: #172b4d;
+    }
+
+    header {
+      background: #073B80;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    nav {
+      background: white;
+      padding: 14px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      box-shadow: 0 2px 8px #0001;
+    }
+
+    nav a {
+      color: #073B80;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #073B80, #1675d1);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #073B80;
+      padding: 13px 22px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 35px 18px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #073B80;
+      margin-bottom: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 22px 12px;
+      border-radius: 13px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #073B80;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #526174;
+    }
+
+    .contact {
+      background: #e4eefb;
+      padding: 35px 18px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #073B80;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #073B80;
+      color: white;
+      text-align: center;
+      padding: 22px 12px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>JEREDA PLUS</h1>
+    <p>Rapidité • Qualité • Fiabilité</p>
+  </header>
+
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#education">Éducation</a>
+    <a href="#business">Business</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="accueil">
+    <h2>Bienvenue sur JEREDA PLUS</h2>
+    <p>
+      Votre plateforme numérique tout-en-un.
+      Découvrez les services, l'éducation,
+      le commerce et l'intelligence artificielle.
+    </p>
+    <a href="#services" class="btn">Découvrir nos services</a>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Nos services numériques</h2>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Bureautique</h3>
+        <p>Saisie, Word, Excel et mise en page.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>CV et lettres</h3>
+        <p>Création de documents professionnels.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Graphisme</h3>
+        <p>Affiches, flyers et communication.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🖨️</div>
+        <h3>Impression</h3>
+        <p>Impression et numérisation.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <h3>Informatique</h3>
+        <p>Assistance et dépannage informatique.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>JEREDA AI</h3>
+        <p>Votre futur assistant intelligent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <h2>Éducation</h2>
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Apprendre avec JEREDA PLUS</h3>
+      <p>Des formations et exercices pour développer vos compétences.</p>
+    </div>
+  </section>
+
+  <section class="section" id="business">
+    <h2>Emploi et business</h2>
+    <div class="card">
+      <div class="icon">🚀</div>
+      <h3>Entreprendre et réussir</h3>
+      <p>Découvrez les opportunités et développez vos projets.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contactez JEREDA PLUS</h2>
+    <p>WhatsApp : 0901349334</p>
+    <p>WhatsApp : 0853547073</p>
+    <br>
+    <a class="btn"
+       href="https://wa.me/243901349334"
+       target="_blank">
+       Nous contacter sur WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2026 JEREDA PLUS</p>
+    <p>Une vision numérique pour la RDC.</p>
+    <p>Développé par JEREDA TECHNOLOGIES</p>
+  </footer>
+
+</body>
+        </html>
+        
 function showPage(page) {
   document.getElementById("home").classList.add("hidden");
   document.getElementById("services").classList.add("hidden");
