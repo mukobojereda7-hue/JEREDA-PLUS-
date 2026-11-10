@@ -5,71 +5,321 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JEREDA PLUS</title>
+
 <style>
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f3f6fc;
+  background: #f1f5fb;
   color: #172b4d;
 }
+
 header {
   background: #0755b8;
   color: white;
   text-align: center;
-  padding: 28px 15px;
+  padding: 25px 15px;
 }
-header h1 { margin: 0; font-size: 30px; }
+
+header h1 { margin: 0; font-size: 29px; }
+
 header p { margin-bottom: 0; }
-main { padding: 20px; max-width: 650px; margin: auto; }
-h2 { color: #0755b8; }
+
+main {
+  max-width: 750px;
+  margin: auto;
+  padding: 20px 15px;
+}
+
+h2, h3 { color: #0755b8; }
+
+.welcome, .service, .request {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 13px;
 }
+
 .module {
   background: white;
-  padding: 22px 10px;
-  border-radius: 14px;
+  padding: 20px 8px;
+  border-radius: 13px;
   text-align: center;
+  cursor: pointer;
   box-shadow: 0 2px 8px #00000012;
-  font-weight: bold;
 }
+
 .module span {
   display: block;
   font-size: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
+
+.module h4 {
+  margin: 5px 0;
+  color: #0755b8;
+}
+
+button {
+  background: #0755b8;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 17px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:active { opacity: 0.8; }
+
+.secondary {
+  background: #e2edfc;
+  color: #0755b8;
+}
+
+.hidden { display: none; }
+
+.service {
+  border-left: 4px solid #0755b8;
+}
+
+.service h3 { margin-top: 0; }
+
+.service p {
+  color: #59677b;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 14px 0 7px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd6e5;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.request button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+#confirmation {
+  display: none;
+  background: #e1f5e8;
+  color: #176b37;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
 footer {
   text-align: center;
-  padding: 25px;
-  color: #667;
+  padding: 25px 10px;
+  color: #68758a;
+  font-size: 13px;
 }
 </style>
 </head>
+
 <body>
+
 <header>
   <h1>JEREDA PLUS</h1>
-  <p>Votre plateforme numérique tout-en-un</p>
   <p>Rapidité • Qualité • Fiabilité</p>
+  <p>Votre plateforme numérique tout-en-un</p>
 </header>
+
 <main>
-  <h2>Bienvenue sur JEREDA PLUS</h2>
-  <p>Découvrez nos services et développez vos possibilités numériques.</p>
-  <h2>Nos services</h2>
-  <div class="grid">
-    <div class="module"><span>💻</span>Services numériques</div>
-    <div class="module"><span>📚</span>Éducation</div>
-    <div class="module"><span>💼</span>Emploi & Business</div>
-    <div class="module"><span>🛒</span>Commerce</div>
-    <div class="module"><span>📰</span>Actualités</div>
-    <div class="module"><span>🤖</span>JEREDA AI</div>
+
+<!-- ACCUEIL -->
+<section id="home">
+  <div class="welcome">
+    <h2>Bienvenue sur JEREDA PLUS</h2>
+    <p>Découvrez nos services numériques et développez vos possibilités.</p>
   </div>
+
+  <h2>Nos modules</h2>
+
+  <div class="grid">
+    <div class="module" onclick="showPage('services')">
+      <span>💻</span>
+      <h4>Services numériques</h4>
+    </div>
+
+    <div class="module">
+      <span>📚</span>
+      <h4>Éducation</h4>
+    </div>
+
+    <div class="module">
+      <span>💼</span>
+      <h4>Emploi & Business</h4>
+    </div>
+
+    <div class="module">
+      <span>🛒</span>
+      <h4>Commerce</h4>
+    </div>
+
+    <div class="module">
+      <span>📰</span>
+      <h4>Actualités</h4>
+    </div>
+
+    <div class="module">
+      <span>🤖</span>
+      <h4>JEREDA AI</h4>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES NUMERIQUES -->
+<section id="services" class="hidden">
+
+  <button class="secondary" onclick="showPage('home')">
+    ← Retour à l'accueil
+  </button>
+
+  <div class="welcome">
+    <h2>💻 Services numériques</h2>
+    <p>Bienvenue dans l'espace des prestations de JEREDA TECHNOLOGIES.</p>
+    <p>Choisissez le service dont vous avez besoin.</p>
+  </div>
+
+  <div class="service">
+    <h3>📝 Saisie de documents</h3>
+    <p>Saisie, rédaction et mise en page de vos documents professionnels.</p>
+    <button onclick="chooseService('Saisie de documents')">Demander ce service</button>
+  </div>
+
+  <div class="service">
+    <h3>📄 CV et lettres de motivation</h3>
+    <p>Création de CV professionnels et lettres de motivation.</p>
+    <button onclick="chooseService('CV et lettres de motivation')">Demander ce service</button>
+  </div>
+
+  <div class="service">
+    <h3>🎨 Affiches et flyers</h3>
+    <p>Conception graphique de flyers, affiches et supports publicitaires.</p>
+    <button onclick="chooseService('Affiches et flyers')">Demander ce service</button>
+  </div>
+
+  <div class="service">
+    <h3>🖨️ Impression et scan</h3>
+    <p>Impression et numérisation de documents.</p>
+    <button onclick="chooseService('Impression et scan')">Demander ce service</button>
+  </div>
+
+  <div class="service">
+    <h3>📊 Word et Excel</h3>
+    <p>Assistance, mise en forme et accompagnement informatique.</p>
+    <button onclick="chooseService('Assistance Word et Excel')">Demander ce service</button>
+  </div>
+
+  <div class="service">
+    <h3>💻 Assistance informatique</h3>
+    <p>Aide informatique, installation et configuration de logiciels.</p>
+    <button onclick="chooseService('Assistance informatique')">Demander ce service</button>
+  </div>
+
+  <div class="request" id="requestForm">
+    <h2>📩 Demander une prestation</h2>
+    <p>Remplissez les informations ci-dessous.</p>
+
+    <form id="serviceForm">
+
+      <label for="clientName">Votre nom complet</label>
+      <input id="clientName" type="text" required placeholder="Entrez votre nom">
+
+      <label for="clientPhone">Votre numéro de téléphone</label>
+      <input id="clientPhone" type="tel" required placeholder="Exemple : +243...">
+
+      <label for="serviceChoice">Service demandé</label>
+      <select id="serviceChoice" required>
+        <option value="">Choisir un service</option>
+        <option>Saisie de documents</option>
+        <option>CV et lettres de motivation</option>
+        <option>Affiches et flyers</option>
+        <option>Impression et scan</option>
+        <option>Assistance Word et Excel</option>
+        <option>Assistance informatique</option>
+      </select>
+
+      <label for="clientDetails">Décrivez votre besoin</label>
+      <textarea id="clientDetails" placeholder="Expliquez ce dont vous avez besoin..."></textarea>
+
+      <button type="submit">Envoyer ma demande</button>
+    </form>
+
+    <div id="confirmation">
+      <h3>Demande enregistrée sur cette page !</h3>
+      <p id="confirmationText"></p>
+      <p>Attention : cette démonstration ne transmet pas encore la demande à JEREDA TECHNOLOGIES.</p>
+    </div>
+  </div>
+
+</section>
+
 </main>
+
 <footer>
-  © 2026 JEREDA TECHNOLOGIES<br>
-  Tous droits réservés.
+  <strong>JEREDA PLUS</strong>
+  <p>Développé par JEREDA TECHNOLOGIES</p>
+  <p>© 2026 - Tous droits réservés</p>
 </footer>
+
+<script>
+function showPage(page) {
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("services").classList.add("hidden");
+
+  document.getElementById(page).classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+
+function chooseService(service) {
+  document.getElementById("serviceChoice").value = service;
+  document.getElementById("requestForm").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+document.getElementById("serviceForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("clientName").value;
+  const service = document.getElementById("serviceChoice").value;
+
+  document.getElementById("confirmationText").textContent =
+    "Merci " + name + ". Votre demande concernant : " + service +
+    " a été préparée avec succès dans cette démonstration.";
+
+  document.getElementById("confirmation").style.display = "block";
+  document.getElementById("confirmation").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+</script>
+
 </body>
 </html>
