@@ -19,7 +19,15 @@
     body {
       font-family: Arial, sans-serif;
       background: #f3f7fc;
-      color: #172b4d;
+      color: #172b4d;<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "/JEREDA-PLUS-/service-worker.js"
+    );
+  });
+}
+</script>
     }
 
     header {
