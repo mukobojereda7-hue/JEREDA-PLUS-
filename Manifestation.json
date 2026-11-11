@@ -1,4 +1,32 @@
 {
+{
+  "id": "/JEREDA-PLUS-/",
+  "name": "JEREDA PLUS",
+  "short_name": "JEREDA",
+  "description": "JEREDA PLUS - Plateforme numérique de services, éducation, emploi et innovation.",
+  "lang": "fr",
+  "start_url": "/JEREDA-PLUS-/",
+  "scope": "/JEREDA-PLUS-/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0756a8",
+  "icons": [
+    {
+      "src": "/JEREDA-PLUS-/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/JEREDA-PLUS-/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
+
   "name": "JEREDA PLUS",
   "short_name": "JEREDA",
   "description": "Plateforme numérique JEREDA PLUS",
